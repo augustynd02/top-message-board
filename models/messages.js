@@ -12,7 +12,8 @@ const messages = [
 ];
 
 const messagesModel = {
-    getAll: () => messages
+    getAll: () => messages,
+    submitMessage: message => messages.push(message),
 }
 
 module.exports = messagesModel;
