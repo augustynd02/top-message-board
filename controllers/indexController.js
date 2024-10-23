@@ -1,7 +1,8 @@
+require('../utils/formatDate');
 const messagesModel = require('../models/messages');
+let currentIndex = 2; // since there are 2 built-in default messages
 
 const indexController = {
-    currentIndex: 2, // since there are 2 built-in default messages
     getIndex: (req, res) => {
         res.render('pages/index', { messages: messagesModel.getAll() });
     },
@@ -12,10 +13,14 @@ const indexController = {
         messagesModel.submitMessage({
             text: req.body.messageText,
             user: req.body.author,
-            added: new Date(),
-            id: currentIndex
+            added: new Date().formatDate(),
+            id: currentIndex++
         })
+        console.log(currentIndex)
         res.redirect('/');
+    },
+    getMessage: (req, res) => {
+        res.render('pages/message', { message: messagesModel.find(req.params.id) });
     }
 }
 

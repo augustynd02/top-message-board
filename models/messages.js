@@ -18,6 +18,7 @@ const messages = [
 const messagesModel = {
     getAll: () => messages,
     submitMessage: message => messages.push(message),
+    find: (id) => messages.find(msg => msg.id == id)
 }
 
 module.exports = messagesModel;
