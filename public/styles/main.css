@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: rgb(16, 16, 16);
+    color: white;
+    font-family: Verdana;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    height: 80px;
+    background-color: rgb(36, 2, 73);
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+}
+
+main h2 {
+    background-color: rgb(75, 14, 139);
+    padding: 20px 40px;
+    border-radius: 8px;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    background-color: rgb(20, 20, 20);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.message {
+    background-color: rgb(32, 32, 32);
+    padding: 10px;
+    border-radius: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+
+    background-color: rgb(75, 14, 139);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form input {
+    margin-bottom: 1em;
+    background-color: rgb(121, 51, 196);
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 8px;
+}
+
+form label {
+    margin-bottom: 4px;
+}
+
+form button {
+    background-color: rgb(75, 14, 139);
+    color: white;
+    align-self: center;
+    padding: 10px 30px;
+    border: 2px solid rgb(36, 2, 73);
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    border: 2px solid rgb(36, 2, 73);
+    background-color: rgb(36, 2, 73);
+}
+
+footer {
+    margin-top: auto;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(36, 2, 73);
+}
+
