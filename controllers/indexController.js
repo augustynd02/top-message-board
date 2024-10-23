@@ -2,10 +2,10 @@ const messagesModel = require('../models/messages');
 
 const indexController = {
     getIndex: (req, res) => {
-        res.render('index', { messages: messagesModel.getAll() });
+        res.render('pages/index', { messages: messagesModel.getAll() });
     },
     getNew: (req, res) => {
-        res.render('form');
+        res.render('pages/form');
     },
     postNew: (req, res) => {
         messagesModel.submitMessage({
