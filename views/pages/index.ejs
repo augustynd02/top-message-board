@@ -9,7 +9,7 @@
             <h2>All Messages</h2>
             <div class="messages">
                 <% messages.forEach(message => { %>
-                    <div class="message" data-index="<%= message.id %>">
+                    <div class="message" data-index=<%= message.id %> onclick="window.location.href='/messages/<%= message.id %>'">
                         <p><%= message.text %></p>
                         <p><%= message.user %>, <%= message.added %></p>
                     </div>

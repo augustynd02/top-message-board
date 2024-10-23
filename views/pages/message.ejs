@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Index</title>
+        <link rel="stylesheet" href="/styles/main.css">
+    </head>
+    <body>
+        <%- include('../partials/header') %>
+        <main>
+            <h2>Message details</h2>
+            <div class="message long" data-index="<%= message.id %>">
+                <p><%= message.text %></p>
+                <p><%= message.user %>, <%= message.added %></p>
+            </div>
+        </main>
+        <%- include('../partials/footer') %>
+    </body>
+</html>
