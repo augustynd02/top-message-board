@@ -58,8 +58,12 @@ main h2 {
 
 .message {
     background-color: rgb(32, 32, 32);
+    width: 500px;
     padding: 10px;
     border-radius: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 form {
