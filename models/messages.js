@@ -1,13 +1,17 @@
+require('../utils/formatDate');
+
 const messages = [
     {
       text: "Hi there!",
       user: "Amando",
-      added: new Date()
+      added: new Date().formatDate(),
+      id: 0
     },
     {
       text: "Hello World!",
       user: "Charles",
-      added: new Date()
+      added: new Date().formatDate(),
+      id: 1
     }
 ];
 
